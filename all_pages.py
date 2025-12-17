@@ -1,10 +1,11 @@
 from nicegui import ui
-from pages.title_generator import title_generator
-from pages.script_generator import script_generator
+from pages import framework, onchain, traceability
 
 def create() -> None:
-    ui.page('/youtube-title-generator/')(title_generator)
-    ui.page('/youtube-script/')(script_generator)
+    ui.page('/framework/')(framework.content)
+    ui.page('/onchain/')(onchain.content)
+    ui.page('/traceability/')(traceability.content)
+
 
 if __name__ == '__main__':
     create()
